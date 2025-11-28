@@ -1,0 +1,98 @@
+/* Reset and base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 10%;
+    background-color: #fff;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.hero-text button, .hero-text a.btn-get-started {
+    background-color: #ff7a00;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.hero-image {
+    max-width: 400px;
+}
+
+.hero-image img {
+    width: 100%;
+}
+
+/* Info Section */
+.info-section {
+    background-color: #2fa4a6;
+    color: #fff;
+    padding: 40px 10%;
+    text-align: center;
+}
+
+.info-section p {
+    font-size: 1.1rem;
+}
+
+/* Feature cards */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 60px 10%;
+}
+
+.feature-card {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.feature-card img {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.feature-card p {
+    color: #666;
+    font-size: 0.95rem;
+}

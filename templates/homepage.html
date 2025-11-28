@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Home Task Manager</title>
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='homepage.css') }}">
+</head>
+<body>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-text">
+        <h1>Welcome to Home Task Manager</h1>
+        <p>Organize your tasks, set reminders, and never miss a deadline again.</p>
+        {% if 'user_id' in session %}
+            <a href="{{ url_for('index') }}" class="btn-get-started">Go to My Tasks</a>
+        {% else %}
+            <a href="{{ url_for('login') }}" class="btn-get-started">Get Started</a>
+        {% endif %}
+    </div>
+    <div class="hero-image">
+        <img src="{{ url_for('static', filename='image.png') }}" alt="Task Management Illustration">
+    </div>
+</section>
+
+<!-- Info Section -->
+<section class="info-section">
+    <p>Track your daily tasks, set priorities, and get notified before due times.</p>
+</section>
+
+<!-- Features Section -->
+<section class="features">
+    <div class="feature-card">
+        <img src="{{ url_for('static', filename='image2.png') }}" alt="Feature Icon">
+        <h3>Personalized Tasks</h3>
+        <p>Each user sees their own tasks and due notifications.</p>
+    </div>
+    <div class="feature-card">
+        <img src="{{ url_for('static', filename='image3.png') }}" alt="Feature Icon">
+        <h3>Due Reminders</h3>
+        <p>Get notified 1 hour before your tasks are due.</p>
+    </div>
+    <div class="feature-card">
+        <img src="{{ url_for('static', filename='image4.png') }}" alt="Feature Icon">
+        <h3>Easy Scheduling</h3>
+        <p>Create tasks with due date & time, set priority and status.</p>
+    </div>
+</section>
+
+<script>
+// Display current date & time
+function updateClock() {
+    const now = new Date();
+    const heroText = document.querySelector('.hero-text p');
+    const currentTime = now.toLocaleTimeString();
+    const currentDate = now.toDateString();
+    heroText.textContent = `Today is ${currentDate} — Current time: ${currentTime}`;
+}
+setInterval(updateClock, 1000);
+updateClock();
+</script>
+
+</body>
+</html>

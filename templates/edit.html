@@ -13,19 +13,28 @@
       <label class="form-label">Title</label>
       <input name="title" class="form-control" required value="{{ task['title'] }}">
     </div>
+
     <div class="mb-3">
       <label class="form-label">Description</label>
       <textarea name="description" class="form-control" rows="3">{{ task['description'] }}</textarea>
     </div>
+
     <div class="row g-2">
       <div class="col-md-4 mb-3">
         <label class="form-label">Category</label>
         <input name="category" class="form-control" value="{{ task['category'] }}">
       </div>
-      <div class="col-md-4 mb-3">
+
+      <div class="col-md-3 mb-3">
         <label class="form-label">Due Date</label>
         <input name="due_date" type="date" class="form-control" value="{{ task['due_date'] }}">
       </div>
+
+      <div class="col-md-3 mb-3">
+        <label class="form-label">Due Time</label>
+        <input name="due_time" type="time" class="form-control" value="{{ task['due_time'] }}">
+      </div>
+
       <div class="col-md-2 mb-3">
         <label class="form-label">Priority</label>
         <select name="priority" class="form-select">
@@ -34,6 +43,7 @@
           <option {% if task['priority']=='Low' %}selected{% endif %}>Low</option>
         </select>
       </div>
+
       <div class="col-md-2 mb-3">
         <label class="form-label">Status</label>
         <select name="status" class="form-select">

@@ -1,5 +1,16 @@
-body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
-.table td { vertical-align: middle;
-  background-color: wheat;
- }
+/* Table hover and buttons */
+table.table tbody tr:hover { background-color: #f0f8ff; transition: background-color 0.3s ease; }
+.btn, .btn-sm { transition: all 0.2s ease; }
+.btn:hover, .btn-sm:hover { transform: scale(1.05); }
+.btn:active, .btn-sm:active { transform: scale(0.95); }
 
+/* Priority badges */
+.badge-high { background-color: #dc3545; color:#fff; }
+.badge-normal { background-color: #ffc107; color:#000; }
+.badge-low { background-color: #0d6efd; color:#fff; }
+.badge-completed { background-color: #198754; color:#fff; }
+.badge-pending { background-color: #ffc107; color:#000; }
+
+/* Due today flashing */
+@keyframes flash { 0% { background-color: #fff3cd; } 50% { background-color: #ffe8a1; } 100% { background-color: #fff3cd; } }
+.due-today { animation: flash 1.5s infinite; font-weight:600; }
